@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    background-image: url(../img/img1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .banner-text {
+    text-align: center;
+    color: rgb(233, 227, 227);
+    align-items: center;
+  }
+  
+  .banner-text h1 {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+  
+  .banner-text P {
+    color: white;
+    font-size: 20px;
+  }
+  
+  .banner-text h2 {
+    font-size: 35px;
+    font-weight: 600;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .button-container a{
+  text-decoration: none;
+  }
+  
+  .button1 {
+    padding: 10px 30px;
+    background-color: rgb(18, 48, 25);
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: bold;
+  }
+  
+  .button1:hover {
+    background-color: #fff;
+    color: rgb(18, 48, 25);
+    transition: .5s;
+  }
+  
+  .animate__fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    animation-duration: 5s;
+  }
+  
+  @media (min-width: 854px) {
+  
+    :root {
+      --padding-container: 0;
+    }
+  
+    .banner-text {
+      text-align: center;
+      color: rgb(233, 227, 227);
+      align-items: center;
+    }
+    
+    .banner-text h1 {
+      font-size: 70px;
+      margin-bottom: 30px;
+    }
+    
+    .banner-text P {
+      color: white;
+      font-size: 25PX;
+    }
+    
+    .banner-text h2 {
+      font-size: 45px;
+      font-weight: 600;
+    }
+    
+    .button-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    
+    .button-container a{
+    text-decoration: none;
+    }
+    
+    .button1 {
+      padding: 10px 30px;
+      background-color: rgb(18, 48, 25);
+      color: #fff;
+      border-radius: 5px;
+      margin: 5px;
+      font-weight: bold;
+    }
+    
+    .button1:hover {
+      background-color: #fff;
+      color: rgb(18, 48, 25);
+      transition: .5s;
+    }
+    
+    .animate__fadeInDown {
+      -webkit-animation-name: fadeInDown;
+      animation-name: fadeInDown;
+      animation-duration: 5s;
+    }
+  
+  }
