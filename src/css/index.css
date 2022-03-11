@@ -65,12 +65,6 @@
     transition: .5s;
   }
   
-  .animate__fadeInDown {
-    -webkit-animation-name: fadeInDown;
-    animation-name: fadeInDown;
-    animation-duration: 5s;
-  }
-  
   @media (min-width: 854px) {
   
     :root {
@@ -122,11 +116,5 @@
       color: rgb(18, 48, 25);
       transition: .5s;
     }
-    
-    .animate__fadeInDown {
-      -webkit-animation-name: fadeInDown;
-      animation-name: fadeInDown;
-      animation-duration: 5s;
-    }
-  
+
   }
