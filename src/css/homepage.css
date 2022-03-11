@@ -88,7 +88,7 @@ nav {
 
 .nav-menu li a.active, .nav-menu li a:hover {
     color: rgb(10, 12, 99);
-    transition: .3s;
+    transition: 3s;
 }
 
 /* Responsive for desktop */

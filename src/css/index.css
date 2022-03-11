@@ -2,6 +2,11 @@
     padding: 0;
     margin: 0;
   }
+
+  :root {
+    --padding-container: 0;
+  }
+
   
   body {
     background-image: url(../img/img1.png);
@@ -66,11 +71,7 @@
   }
   
   @media (min-width: 854px) {
-  
-    :root {
-      --padding-container: 0;
-    }
-  
+
     .banner-text {
       text-align: center;
       color: rgb(233, 227, 227);
