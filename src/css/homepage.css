@@ -6,22 +6,16 @@
     box-sizing: border-box;
 }
 
- :root {
-    --facebook: #3b5999;
-    --instagram: #e4405f;
-    --twitter: #55acee;
-    --pinterest: #bd081c;
-    --linkedin: #0077B5;
-    --inverse-theme-color: #20232a;
-    --box-shadow: #21242c80;
+body {
+    font-family: 'Allerta Stencil';
+    background-color: #f7f7f7;
 }
 
-
-/*Estilos principal*/
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f7f7f7;
+header {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgb(7, 2, 2);
 }
 
 
@@ -29,8 +23,8 @@ body {
 
 nav {
     position: fixed;
-    height: 100px;
     width: 100%;
+    display: block;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(7, 2, 2);
@@ -71,88 +65,215 @@ nav {
     font-weight: 600;
 }
 
+.nav-menu li a:hover {
+    color: rgb(32, 216, 16);
+    transition: 3s;
+}
+
+/*Seccion de banners*/
+
 .banner-principal {
     width: 100%;
     height: 621px;
-    background-image: url(../img/bannerprincipal.jpeg);
+    background-image: url(../img/banner-principal.png);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
 
 .logo2 {
-    margin-left: 593px;
-    margin-top: 520px;
-    width: 355px;
+    margin-left: 533px;
+    margin-top: 519px;
+    width: 451px;
 }
 
 .banner-text {
     text-align: center;
     padding: 280px;
-    background-image: url(../img/img3.jpg);
+    background-image: url(../img/banner-text.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    font-size: 25px;
+    color:white
 }
 
 .banner-textSecond {
     text-align: center;
     padding: 280px;
-    background-image: url(../img/img4.jpg);
+    background-image: url(../img/banner-text-second.png);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    font-size: 25px;
 }
 
-#check {
-    display: none;
+/* contenedor text */
+
+.champions-container {
+    margin-top: 135px;
+    text-align: center;
+    font-size: 34px;
 }
 
-#check:checked~.nav-menu {
-    height: 100vh;
+.description-champions {
+    font-size: 20px;
+    line-height: 2rem;
 }
 
-#check:checked~.nav-menu li {
-    display: block;
+h1 {
+    line-height: 97px;
 }
 
-.nav-menu li a.active,
-.nav-menu li a:hover {
-    color: rgb(10, 12, 99);
-    transition: 3s;
+.champions {
+    margin-left: 30px;
+    margin-bottom: 28px;
+    background-color: #000000;
 }
+
+.champions p {
+    font-size: 24px;
+    color: #f7f7f7;
+    height: 40px;
+}
+
+/* search champion and button filter */
+
+.search-champion {
+    width: 50%;
+    height: 50px;
+    margin: 20px;
+    background: #FCFBFB;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.orden {
+    height: 50px;
+    margin: 20px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.filter-champions-by-roles {
+    width: 163px;
+    height: 44px;
+    background: #C7A43B;
+    border-radius: 10px;
+    margin: 10px 15px;
+}
+
 
 
 /* Responsive for desktop */
 
 @media screen and (min-width: 768px) {
+
+    /*seccion nav*/
     .logo {
         margin-left: 2px;
         margin-top: 10px;
         width: 113px;
     }
+
     .logo1 {
         margin-left: 10px;
         margin-top: 10px;
         width: 50px;
     }
+
     nav {
         height: 100px;
+        top: 0;
     }
+
     .bar-btn {
         display: none;
     }
+
     .nav-menu {
         height: 100px;
         top: 0;
         background: none;
         transition: none;
         text-align: right;
+        position: fixed;
+        width: 100%;
     }
+
     .nav-menu li {
         display: inline-block;
         line-height: 100px;
         margin: 0 20px;
         transition: none;
     }
+
+    /* ventana de champions, descripciones, barra de busqueda*/
+    .champions-container {
+        margin-top: 135px;
+        text-align: center;
+        font-size: 34px;
+    }
+
+    .description-champions {
+        font-size: 20px;
+        line-height: 2rem;
+    }
+
+    h1 {
+        line-height: 97px;
+    }
+
+    .search-champion {
+        width: 50%;
+        height: 50px;
+        margin: 20px;
+        background: #FCFBFB;
+        border: 2px solid #000000;
+        box-sizing: border-box;
+        border-radius: 10px;
+        padding-left: 20px;
+        font-size: 15px;
+    }
+
+    .champions {
+        margin-left: 30px;
+        margin-bottom: 28px;
+        background-color: #000000;
+    }
+
+    .champions p {
+        font-size: 24px;
+        color: #f7f7f7;
+        height: 40px;
+    }
+
+    .orden {
+        height: 50px;
+        margin: 20px;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+    
+    .filter-champions-by-roles {
+        width: 163px;
+        height: 44px;
+        background: #C7A43B;
+        border-radius: 10px;
+        margin: 10px 15px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
+
+    .filter-champions-by-roles:hover {
+        background-color: rgb(8, 63, 6);
+        color: #FCFBFB;
+    }
+
 }
