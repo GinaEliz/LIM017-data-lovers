@@ -6,8 +6,7 @@
     box-sizing: border-box;
 }
 
-:root {
-
+ :root {
     --facebook: #3b5999;
     --instagram: #e4405f;
     --twitter: #55acee;
@@ -17,6 +16,7 @@
     --box-shadow: #21242c80;
 }
 
+
 /*Estilos principal*/
 
 body {
@@ -25,13 +25,12 @@ body {
 }
 
 
-
 /* Navegacion*/
+
 nav {
     position: fixed;
     height: 100px;
     width: 100%;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(7, 2, 2);
@@ -52,13 +51,11 @@ nav {
     width: 100%;
     height: 0vh;
     top: 100px;
-    background-color: rgba(70, 61, 61, 0.95);
+    background-color: #000000;
     text-align: center;
     transition: all .5s;
     box-shadow: 0 0.25rem 0.25rem 0 var(--box-shadow);
-
 }
-
 
 .nav-menu li {
     display: none;
@@ -74,6 +71,39 @@ nav {
     font-weight: 600;
 }
 
+.banner-principal {
+    width: 100%;
+    height: 621px;
+    background-image: url(../img/bannerprincipal.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.logo2 {
+    margin-left: 593px;
+    margin-top: 520px;
+    width: 355px;
+}
+
+.banner-text {
+    text-align: center;
+    padding: 280px;
+    background-image: url(../img/img3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.banner-textSecond {
+    text-align: center;
+    padding: 280px;
+    background-image: url(../img/img4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 #check {
     display: none;
 }
@@ -86,43 +116,39 @@ nav {
     display: block;
 }
 
-.nav-menu li a.active, .nav-menu li a:hover {
+.nav-menu li a.active,
+.nav-menu li a:hover {
     color: rgb(10, 12, 99);
     transition: 3s;
 }
 
-/* Responsive for desktop */
-@media screen and (min-width: 768px) {
 
+/* Responsive for desktop */
+
+@media screen and (min-width: 768px) {
     .logo {
         margin-left: 2px;
         margin-top: 10px;
         width: 113px;
     }
-
     .logo1 {
         margin-left: 10px;
         margin-top: 10px;
         width: 50px;
     }
-
     nav {
         height: 100px;
     }
-
     .bar-btn {
         display: none;
     }
-
     .nav-menu {
         height: 100px;
         top: 0;
         background: none;
         transition: none;
         text-align: right;
-        
     }
-
     .nav-menu li {
         display: inline-block;
         line-height: 100px;
