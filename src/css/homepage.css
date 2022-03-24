@@ -210,6 +210,43 @@ h1 {
     font-size: 40px;
 }
 
+.champions p {
+    font-size: 24px;
+    color: #f7f7f7;
+    height: 40px;
+}
+
+
+/* search champion and button filter */
+
+.search-champion {
+    width: 50%;
+    height: 50px;
+    margin: 20px;
+    background: #FCFBFB;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.orden {
+    height: 50px;
+    margin: 20px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.filter-champions-by-roles {
+    width: 163px;
+    height: 44px;
+    background: #C7A43B;
+    border-radius: 10px;
+    margin: 10px 15px;
+}
+
 
 /* Responsive for desktop */
 
@@ -325,4 +362,5 @@ h1 {
     .name {
         font-size: 40px;
     }
+    /*prueba*/
 }
