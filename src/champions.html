@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEAGUE OF LEGENDS</title>
     <link rel="stylesheet" href="./css/homepage.css">
+    <script src="https://kit.fontawesome.com/0c917cf36c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -30,16 +31,16 @@
     </header>
     <main>
         <section class="champions-container">
-            <h1>ESCOGE TU CAMPEÓN</h1>
+            <h3> ESCOGE TU CAMPEÓN</h3>
             <p class="description-champions">Teniendo en cuenta que hay más de 140 campeones, <br>
                 no tardarás en encontrar tu estilo de juego. Domina a uno o a todos.</p>
             <input type="text" class="search-champion" id="search-champion-by-name" placeholder="Search...">
-            
-              <select class="orden" name="Orden" id="orden" >
+
+            <select class="orden" name="Orden" id="orden">
                 <option value="" disabled selected>Orden</option>
-                <option value="az">A-Z</option>
-                <option value="za">Z-A</option>
-              </select>
+                <option value="az">Z-A</option>
+                <option value="za">A-Z</option>
+            </select>
             <br>
             <section class="btn-filter-champions-roles">
                 <input type="button" class="filter-champions-by-roles" id="all" value="All">
@@ -51,10 +52,22 @@
                 <br>
                 <input type="button" class="filter-champions-by-roles" id="shooter" value="Marksman">
                 <input type="button" class="filter-champions-by-roles" id="support" value="Support">
-                
+
             </section>
         </section>
-        
+
+        <section class="container-cards">
+            <div id="card"></div>
+            <div id="modals"></div>
+        </section>
+
+        <div class="btn-scroll-champions">
+            <button class="btn-scrolltop" id="btn_scrolltop">
+                <i class="fa-solid fa-chevron-up"></i>
+            </button>
+        </div>
+
+
     </main>
     <script src="./main.js" type="module"></script>
 </body>
