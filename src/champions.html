@@ -8,6 +8,7 @@
     <title>LEAGUE OF LEGENDS</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/homepage.css">
+    <script src="https://kit.fontawesome.com/0c917cf36c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -32,9 +33,9 @@
             <input type="search" class="search-champion" id="search-champion-by-name" placeholder="Search...">
             <select class="orden" name="Orden" id="orden">
                 <option value="" disabled selected>Orden</option>
-                <option value="az">A-Z</option>
-                <option value="za">Z-A</option>
-              </select>
+                <option value="az">Z-A</option>
+                <option value="za">A-Z</option>
+            </select>
             <br>
             <section class="btn-filter-champions-roles">
                 <input type="button" class="filter-champions-by-roles" id="all" value="All">
@@ -52,7 +53,16 @@
         <section class="container-cards">
             <div id="card"></div>
         </section>
+        <section class="container-cards">
+            <div id="card"></div>
+            <div id="modals"></div>
+        </section>
 
+        <div class="btn-scroll-champions">
+            <button class="btn-scrolltop" id="btn_scrolltop">
+                <i class="fa-solid fa-chevron-up"></i>
+            </button>
+        </div>
     </main>
     <script src="./main.js" type="module"></script>
     </section>

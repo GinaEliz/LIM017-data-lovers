@@ -79,33 +79,30 @@ nav {
     background-image: url(../img/banner-principal.png);
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 .logo2 {
-    margin-left: 533px;
-    margin-top: 519px;
-    width: 451px;
+    margin-left: 39px;
+    margin-top: 389px;
+    width: 293px;
 }
 
 .banner-text {
     text-align: center;
-    padding: 280px;
+    padding: 82px;
     background-image: url(../img/banner-text.jpg);
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
     font-size: 25px;
     color: white
 }
 
 .banner-textSecond {
     text-align: center;
-    padding: 280px;
-    background-image: url(../img/banner-text-second.png);
-    background-position: center;
+    padding: 82px;
+    background-image: url(../img/img2\ \(1\).png);
     background-size: cover;
-    background-attachment: fixed;
+    background-position: center;
     font-size: 25px;
 }
 
@@ -113,23 +110,27 @@ nav {
 /* contenedor text */
 
 .champions-container {
-    margin-top: 135px;
     text-align: center;
-    font-size: 34px;
 }
 
 .description-champions {
-    font-size: 20px;
-    line-height: 2rem;
+    font-size: 18px;
+    margin-top: -30px;
 }
 
 h1 {
-    line-height: 97px;
+    padding: 9x;
+    background-color: rgba(22, 22, 25, 0.7);
+    border-radius: 28px 28px 0 0;
+}
+
+h3 {
+    line-height: 150px;
+    font-size: 25px;
 }
 
 .champions {
-    margin-left: 30px;
-    margin-bottom: 28px;
+    margin: 15px;
     background-color: #000000;
 }
 
@@ -221,30 +222,57 @@ h1 {
 
 .search-champion {
     width: 50%;
-    height: 50px;
-    margin: 20px;
+    height: 40px;
+    margin: 5px;
     background: #FCFBFB;
     border: 2px solid #000000;
     box-sizing: border-box;
     border-radius: 10px;
-    padding-left: 20px;
-    font-size: 15px;
+    padding-left: 15px;
+    font-size: 12px;
 }
 
 .orden {
-    height: 50px;
-    margin: 20px;
+    height: 40px;
+    margin: 16px;
     border: 2px solid #000000;
     border-radius: 10px;
     font-size: 15px;
 }
 
 .filter-champions-by-roles {
-    width: 163px;
-    height: 44px;
+    width: 85px;
+    height: 32px;
     background: #C7A43B;
     border-radius: 10px;
     margin: 10px 15px;
+}
+
+
+/*cards data*/
+
+.container-cards {
+    margin-top: 18px;
+}
+
+#card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.img-champions {
+    width: 119px;
+    height: 111px;
+}
+
+.name {
+    font-size: 40px;
+}
+
+.filter {
+    display: none;
 }
 
 
@@ -296,6 +324,13 @@ h1 {
     }
     h1 {
         line-height: 97px;
+        font-size: 36px;
+        padding: 55px;
+        border-radius: 28px 28px 0 0;
+    }
+    h3 {
+        line-height: 150px;
+        font-size: 65px;
     }
     .search-champion {
         width: 50%;
@@ -328,8 +363,6 @@ h1 {
     .filter-champions-by-roles {
         width: 163px;
         height: 44px;
-        background: #C7A43B;
-        border-radius: 10px;
         margin: 10px 15px;
         border: none;
         font-weight: bold;
