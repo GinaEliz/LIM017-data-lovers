@@ -276,6 +276,119 @@ h3 {
 }
 
 
+/*modals data*/
+
+
+/*fondo*/
+
+.info_champions {
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Modal Content */
+
+#box_content {
+    margin: auto;
+    background-color: rgba(14, 17, 44, 1);
+    color: #f7f7f7;
+    width: 80%;
+}
+
+
+/*imagen del campeon*/
+
+.backgroung_img_champion {
+    display: block;
+    width: 100%;
+    height: 200px;
+}
+
+
+/*nombre del campeon*/
+
+.modal_name_champion {
+    width: auto;
+    height: 100%;
+    margin: 20px;
+    font-size: 30px;
+}
+
+
+/*descripción*/
+
+.modal_description_champion {
+    font-size: 15px;
+    margin: 20px;
+    justify-content: center;
+}
+
+
+/*caracteristicas del campeón*/
+
+.modal_description_features {
+    font-size: 13px;
+    margin-left: 5px;
+    margin-bottom: 7px;
+    display: flex;
+    flex-direction: row;
+}
+
+.modal_description_features p {
+    margin-left: 15px;
+}
+
+.modal_features {
+    display: flex;
+    flex-direction: row;
+}
+
+.modal_features p {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 15px 20px;
+    background-color: rgba(199, 164, 59, 1);
+    color: #000000;
+    margin-right: 6px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+
+
+/*Btn cerrar*/
+
+.info_champions_close {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    color: black;
+    float: right;
+    background-color: #f7f7f7;
+    opacity: 20%;
+    margin: 10px;
+    border-radius: 2px;
+    font-size: 20px;
+}
+
+.info_champions_close:hover,
+.info_champions_close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 /* Responsive for desktop */
 
 @media screen and (min-width: 768px) {
@@ -395,5 +508,59 @@ h3 {
     .name {
         font-size: 40px;
     }
-    /*prueba*/
+    /*modals*/
+    /* Modal Content */
+    #box_content {
+        width: 60%;
+        height: 100%;
+    }
+    /*imagen del campeon*/
+    .backgroung_img_champion {
+        width: 50%;
+        height: 100%;
+        left: 810px;
+        top: 200px;
+    }
+    /*nombre del campeon*/
+    .modal_name_champion {
+        position: absolute;
+        width: 28%;
+        height: 20%px;
+        left: 49.5%;
+        top: 150px;
+        font-weight: 400;
+        font-size: 50px;
+        text-align: center;
+    }
+    /*descripción*/
+    .modal_description_champion {
+        position: absolute;
+        width: 28%;
+        height: 20%;
+        left: 49.5%;
+        top: 250px;
+        font-weight: 400;
+        line-height: 23px;
+        font-size: 15px;
+        text-align: center;
+    }
+    /*caracteristicas del campeón*/
+    .modal_description_features {
+        position: absolute;
+        top: 60%;
+        left: 52%;
+    }
+    .modal_description_features p {
+        padding: 4px;
+    }
+    .modal_features {
+        position: absolute;
+        top: 64%;
+        left: 52%;
+    }
+    .modal_features p {
+        width: 60px;
+        height: 60px;
+        padding: 20px 25px;
+    }
 }
