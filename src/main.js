@@ -1,4 +1,4 @@
-import { filterByName, filterByRoles, dataOrden } from './data.js';
+import { filterByName, filterByRoles, dataOrden, computeStats } from './data.js';
 import data from './data/lol/lol.js';
 
 
@@ -114,3 +114,27 @@ ordenZA.addEventListener('change', () => {
     let ordenChampion = dataOrden(championsData, ordenZA.value);
     seeChampions(ordenChampion);
 });
+
+// MOSTRAR DATO CURIOSO
+//PARA ABRIR BOTON
+const btnSeePorcentDifficulty = document.getElementById("btn-curious-fact");
+btnSeePorcentDifficulty.addEventListener("click", function() {
+    const showPhrase = document.getElementById("container-curious-fact");
+    showPhrase.style.display = "block";
+});
+//PARA CERRA BOTON
+const hidePorcentDifficulty = document.getElementById("btn-close-curious-fact");
+hidePorcentDifficulty.addEventListener("click", function() {
+    const hidePhrase = document.getElementById("container-curious-fact");
+    hidePhrase.style.display = "none"
+});
+//FUNCION ASIGNA VALOR Y LOS CONVIERTE EN STRING
+function showComputeStats() {
+    const seeCuriousFactPhrase = document.getElementById("curious-fact-phrase");
+    const porcentsValues = computeStats(championsData);
+    const porcentDifficultyEasy = porcentsValues.splice(0, 1).join().slice(0, 4) + "%";
+    const porcentDifficultyMedium = porcentsValues.splice(0, 1).join().slice(0, 4) + "%";
+    const porcentDifficultyHard = porcentsValues.splice(0).join().slice(0, 4) + "%";
+    seeCuriousFactPhrase.innerHTML = "El " + porcentDifficultyEasy + " de los campones son de dificultad fácil. Mientras que el " + porcentDifficultyMedium + " de los campeones son de dificultad media y el " + porcentDifficultyHard + " son de dificultad alta."
+}
+showComputeStats();
