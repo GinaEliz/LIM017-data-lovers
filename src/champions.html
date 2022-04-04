@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEAGUE OF LEGENDS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/homepage.css">
     <script src="https://kit.fontawesome.com/0c917cf36c.js" crossorigin="anonymous"></script>
 </head>
@@ -18,24 +19,18 @@
                 <img src="./img/logo2.png" alt="logo" class="logo1">
             </div>
             <ul class="nav-menu">
-                <li><a class="active" href="./homepage.html">INICIO</a></li>
-                <li><a href="./championsearch.html">CAMPEONES</a></li>
-                <li><a
-                        href="https://support.riotgames.com/hc/es-419?_gl=1%2A1t49y3j%2A_ga%2AMTYxNzAyMDYwLjE2NDYyMzIwNDQ.%2A_ga_FXBJE5DEDD%2AMTY0NjY2MzYwMi4yLjEuMTY0NjY2NTEzMS42MA..">ASISTENCIA</a>
-                </li>
-                <li><a
-                        href="https://www.leagueoflegends.com/es-es/how-to-play/?_gl=1*1kxkx0e*_ga*MTYxNzAyMDYwLjE2NDYyMzIwNDQ.*_ga_FXBJE5DEDD*MTY0NjY2MzYwMi4yLjEuMTY0NjY2NTEzMS42MA..">QUIERO
-                        JUGAR</a></li>
+                <li><a class="active" href="homepage.html">INICIO</a></li>
+                <li><a href="./champions.html">CAMPEONES</a></li>
+                <li><a href="https://support.riotgames.com/hc/es-419?_gl=1%2A1t49y3j%2A_ga%2AMTYxNzAyMDYwLjE2NDYyMzIwNDQ.%2A_ga_FXBJE5DEDD%2AMTY0NjY2MzYwMi4yLjEuMTY0NjY2NTEzMS42MA..">ASISTENCIA</a></li>
+                <li><a href="https://www.leagueoflegends.com/es-es/how-to-play/?_gl=1*1kxkx0e*_ga*MTYxNzAyMDYwLjE2NDYyMzIwNDQ.*_ga_FXBJE5DEDD*MTY0NjY2MzYwMi4yLjEuMTY0NjY2NTEzMS42MA..">QUIERO JUGAR</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="champions-container">
-            <h3> ESCOGE TU CAMPEÓN</h3>
-            <p class="description-champions">Teniendo en cuenta que hay más de 140 campeones, <br>
-                no tardarás en encontrar tu estilo de juego. Domina a uno o a todos.</p>
-            <input type="text" class="search-champion" id="search-champion-by-name" placeholder="Search...">
-
+            <h3>ESCOGE TU CAMPEÓN</h3>
+            <p class="description-champions">Teniendo en cuenta que hay más de 140 campeones, <br> no tardarás en encontrar tu estilo de juego. Domina a uno o a todos.</p>
+            <input type="search" class="search-champion" id="search-champion-by-name" placeholder="Search...">
             <select class="orden" name="Orden" id="orden">
                 <option value="" disabled selected>Orden</option>
                 <option value="az">Z-A</option>
@@ -54,8 +49,18 @@
                 <input type="button" class="filter-champions-by-roles" id="support" value="Support">
 
             </section>
+            <section>
+                <button class="curious-fact" id="btn-curious-fact">Sabías qué...</button>
+                <article id="container-curious-fact" style="display: none;">
+                    <p id="curious-fact-phrase"></p>
+                    <button id="btn-close-curious-fact">⬆️ </button>
+                </article>
+            </section>
         </section>
-
+        </section>
+        <section class="container-cards">
+            <div id="card"></div>
+        </section>
         <section class="container-cards">
             <div id="card"></div>
             <div id="modals"></div>
@@ -66,10 +71,7 @@
                 <i class="fa-solid fa-chevron-up"></i>
             </button>
         </div>
-
-
     </main>
     <script src="./main.js" type="module"></script>
-</body>
-
-</html>
+    </section>
+    </main>

@@ -1,4 +1,4 @@
-import { filterByName, filterByRoles, dataOrden } from './data.js';
+import { filterByName, filterByRoles, dataOrden, computeStats } from './data.js';
 import data from './data/lol/lol.js';
 
 
@@ -13,53 +13,49 @@ function seeChampions(championsData) {
     for (let champion in championsData) {
         let data_champion = championsData[champion];
         seeDataHTML += `<section class="champions" id="champions">
-        <img class="img-champions" id="img_champions"src=${data_champion.splash}>
+        <img class="img-champions" data-champ="${data_champion.id}"src=${data_champion.splash}>
         <p class="name-champions"> ${data_champion.id}</p>
         </section>`
-        seeModalDataHtml += `<section class="info_champions" id="info_champions_modals" style="display:none">
-        <div id="modal_content">
+        seeModalDataHtml += `<section class="info_champions" id="${data_champion.id}" style="display:none;">
         <div id="box_content">
-        <span class="info_champions_close" id="close_modal">X</span>
-        <p class="name-champions"> ${data_champion.id}</p>
-        <p>Descripción: ${data_champion.blurb}</p>
-        <p>Información:</p>
-        <p> Ataque: ${data_champion.info.attack}</p>
-        <p> Defensa:${data_champion.info.defense}</p>
-        <p> Magia: ${data_champion.info.magic}</p>
-        <p> Dificultad: ${data_champion.info.difficulty}</p>
-        </div>
+        <span class="info_champions_close" data-close="${data_champion.id}">x</span>
+        <img class="backgroung_img_champion" data-champ="${data_champion.id}"src=${data_champion.splash}>
+        <p class="modal_name_champion"> ${data_champion.id}</p>
+        <p class="modal_description_champion">${data_champion.blurb}</p>
+        <section class="modal_description_features">
+        <p> Ataque:</p>
+        <p> Defensa:</p>
+        <p> Magia:</p>
+        <p> Dificultad:</p>
+        </section>
+        <section class="modal_features">
+        <p>${data_champion.info.attack}</p>
+        <p>${data_champion.info.defense}</p>
+        <p>${data_champion.info.magic}</p>
+        <p>${data_champion.info.difficulty}</p>
+        </section>
         </div>
         </section>`
         html.innerHTML = seeDataHTML;
         modalsHtml.innerHTML = seeModalDataHtml;
     }
-    //const btnBuy = document.getElementsByClassName('button2');
-    //for (let i = 0; i < btnBuy.length; i++) {
-    //btnBuy[i].addEventListener('click', showSecondScreen);
 
-    // const infoModal = document.getElementById("info_champions_modals");
-    // const clickShowModal = document.getElementsByClassName('img_champions');
-    // for (let i = 0; i < clickShowModal.length; i++) {
-    //     clickShowModal[i].addEventListener("click", () => {
-    //         infoModal.style.display = "block"
-    //     });
-    // }
-    //console.log(showModal)
-    const showModal = document.getElementsByClassName("info_champions");
-    for (let i = 0; i < showModal.length; i++) {
-        return showModal[i];
-    }
-    const openModal = document.getElementById("img_champions")
-    const hideModal = document.getElementById("close_modal");
-    openModal.addEventListener("click", function() {
-        showModal[i].style.display = "block";
-    });
 
-    hideModal.addEventListener("click", function() {
-        showModal[i].style.display = "none"
+    const openModal = document.querySelectorAll(".img-champions")
+    const hideModal = document.querySelectorAll(".info_champions_close");
+    openModal.forEach(om => {
+        om.addEventListener('click', e => {
+            document.getElementById(e.target.dataset.champ).style.display = "block";
+        })
+    })
+    hideModal.forEach(hm => {
+        hm.addEventListener('click', e => {
+            document.getElementById(e.target.dataset.close).style.display = "none";
+        })
     })
 }
 
+seeChampions(championsData);
 
 //FILTRAR POR NOMBRE EN LA BARRA DE BUSQUEDA
 const inputSearchByName = document.getElementById("search-champion-by-name");
@@ -73,7 +69,6 @@ seeChampions(championsData);
 const btnTankChampion = document.getElementById("tank");
 btnTankChampion.addEventListener("click", function() {
     const tankValue = document.getElementById("tank").value;
-    console.log(tankValue);
     let rolesChampion = filterByRoles(championsData, tankValue);
     seeChampions(rolesChampion);
 });
@@ -81,7 +76,6 @@ btnTankChampion.addEventListener("click", function() {
 const btnAssassinChampion = document.getElementById("assassin");
 btnAssassinChampion.addEventListener("click", function() {
     const assassinValue = document.getElementById("assassin").value;
-    console.log(assassinValue);
     let rolesChampion = filterByRoles(championsData, assassinValue);
     seeChampions(rolesChampion);
 });
@@ -89,7 +83,6 @@ btnAssassinChampion.addEventListener("click", function() {
 const btnMageChampion = document.getElementById("mage");
 btnMageChampion.addEventListener("click", function() {
     const mageValue = document.getElementById("mage").value;
-    console.log(mageValue);
     let rolesChampion = filterByRoles(championsData, mageValue);
     seeChampions(rolesChampion);
 });
@@ -97,7 +90,6 @@ btnMageChampion.addEventListener("click", function() {
 const btnFighterChampion = document.getElementById("fighter");
 btnFighterChampion.addEventListener("click", function() {
     const fighterValue = document.getElementById("fighter").value;
-    console.log(fighterValue);
     let rolesChampion = filterByRoles(championsData, fighterValue);
     seeChampions(rolesChampion);
 });
@@ -105,7 +97,6 @@ btnFighterChampion.addEventListener("click", function() {
 const btnMarksmanChampion = document.getElementById("shooter");
 btnMarksmanChampion.addEventListener("click", function() {
     const marksmanValue = document.getElementById("shooter").value;
-    console.log(marksmanValue);
     let rolesChampion = filterByRoles(championsData, marksmanValue);
     seeChampions(rolesChampion);
 });
@@ -113,21 +104,37 @@ btnMarksmanChampion.addEventListener("click", function() {
 const btnSupportChampion = document.getElementById("support");
 btnSupportChampion.addEventListener("click", function() {
     const supportValue = document.getElementById("support").value;
-    console.log(supportValue);
     let rolesChampion = filterByRoles(championsData, supportValue);
     seeChampions(rolesChampion);
 });
 
 //ORDENAR CAMPEONES DEL Z-A
-const ordenZA = document.getElementById("orden");
+let ordenZA = document.getElementById("orden");
 ordenZA.addEventListener('change', () => {
     let ordenChampion = dataOrden(championsData, ordenZA.value);
     seeChampions(ordenChampion);
 });
 
-const allChampions = document.getElementById("all");
-allChampions.addEventListener("click", () => {
-    let championsAll = data(championsData, allChampions.value);
-    seeChampions(championsAll);
-})
-
+// MOSTRAR DATO CURIOSO
+//PARA ABRIR BOTON
+const btnSeePorcentDifficulty = document.getElementById("btn-curious-fact");
+btnSeePorcentDifficulty.addEventListener("click", function() {
+    const showPhrase = document.getElementById("container-curious-fact");
+    showPhrase.style.display = "block";
+});
+//PARA CERRA BOTON
+const hidePorcentDifficulty = document.getElementById("btn-close-curious-fact");
+hidePorcentDifficulty.addEventListener("click", function() {
+    const hidePhrase = document.getElementById("container-curious-fact");
+    hidePhrase.style.display = "none"
+});
+//FUNCION ASIGNA VALOR Y LOS CONVIERTE EN STRING
+function showComputeStats() {
+    const seeCuriousFactPhrase = document.getElementById("curious-fact-phrase");
+    const porcentsValues = computeStats(championsData);
+    const porcentDifficultyEasy = porcentsValues.splice(0, 1).join().slice(0, 4) + "%";
+    const porcentDifficultyMedium = porcentsValues.splice(0, 1).join().slice(0, 4) + "%";
+    const porcentDifficultyHard = porcentsValues.splice(0).join().slice(0, 4) + "%";
+    seeCuriousFactPhrase.innerHTML = "El " + porcentDifficultyEasy + " de los campones son de dificultad fácil. Mientras que el " + porcentDifficultyMedium + " de los campeones son de dificultad media y el " + porcentDifficultyHard + " son de dificultad alta."
+}
+showComputeStats();

@@ -26,3 +26,27 @@ export const dataOrden = (data, sortOrder) => {
             return data
     }
 };
+
+export const computeStats = (data) => {
+    const total = data.length;
+    let countEasy = 0;
+    let countMedium = 0;
+    let countHard = 0;
+    let porcentEasy = 0;
+    let porcentMedium = 0;
+    let porcentHard = 0;
+    for (const element of data) {
+        if (element.info.difficulty <= 3) {
+            countEasy++;
+            porcentEasy = countEasy * 100 / total;
+        } else if (element.info.difficulty >= 4 && element.info.difficulty <= 6) {
+            countMedium++;
+            porcentMedium = countMedium * 100 / total;
+        } else if (element.info.difficulty >= 7 && element.info.difficulty <= 10) {
+            countHard++;
+            porcentHard = countHard * 100 / total;
+        }
+
+    }
+    return [(porcentEasy), (porcentMedium), (porcentHard)]
+}
