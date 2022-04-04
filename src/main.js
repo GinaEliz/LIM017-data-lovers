@@ -114,5 +114,3 @@ ordenZA.addEventListener('change', () => {
     let ordenChampion = dataOrden(championsData, ordenZA.value);
     seeChampions(ordenChampion);
 });
-
-console.log(computeStats(championsData));
