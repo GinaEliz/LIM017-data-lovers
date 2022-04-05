@@ -1,4 +1,4 @@
-import { filterByName, filterByRoles, dataOrden, computeStats } from '../src/data.js';
+import { filterByName, filterByRoles, dataOrden, computeStats, percetFloor } from '../src/data.js';
 const testLol = [{
         id: "Braum",
         name: "Braum",
