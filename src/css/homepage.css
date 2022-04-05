@@ -68,6 +68,26 @@ nav {
     transition: 3s;
 }
 
+.header-nav__menu-icon {
+    font-size: 2rem;
+    color:  rgb(7, 2, 2);
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  
+  .header-nav__menu-icon:hover {
+    font-size: 2.5rem;
+    filter: brightness(250%);
+  }
+  
+  .header-nav__menu-checkbox {
+    display: none;
+  }
+  
+  .header-nav__menu-checkbox:checked+.header-nav__link-list {
+    left: 0;
+  }
+
 
 /*Seccion de banners*/
 
@@ -132,8 +152,18 @@ nav {
     border-radius: 40px;
     border: none;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
 }
 
+
+.curious-fact {
+    width: 101px;
+    height: 32px;
+    background: rgb(8, 63, 6);
+    color: #f7f7f7;
+    border-radius: 10px;
+    margin: 10px 15px;
+}
 
 /* contenedor text */
 
@@ -208,8 +238,8 @@ h3 {
 }
 
 .img-champions {
-    width: 195px;
-    height: 205px;
+    width: 119px;
+    height: 111px;
 }
 
 .name {
@@ -333,22 +363,27 @@ h3 {
 /* Responsive for desktop */
 
 @media screen and (min-width: 768px) {
+
     /*seccion nav*/
     .logo {
         margin-left: 2px;
         margin-top: 10px;
         width: 113px;
     }
+
     .logo1 {
         margin-left: 10px;
     }
+
     nav {
         height: 100px;
         top: 0;
     }
+
     .bar-btn {
         display: none;
     }
+
     .nav-menu {
         height: 100px;
         top: 0;
@@ -356,12 +391,14 @@ h3 {
         transition: none;
         text-align: right;
     }
+
     .nav-menu li {
         display: inline-block;
         line-height: 100px;
         margin: 0 20px;
         transition: none;
     }
+
     /*Seccion de banners*/
     .banner-principal {
         height: 640px;
@@ -369,6 +406,7 @@ h3 {
         background-image: url(../img/banner-principal.png);
         background-attachment: fixed;
     }
+
     .logo2 {
         position: absolute;
         width: 650px;
@@ -376,9 +414,11 @@ h3 {
         top: 35%;
         margin: 0;
     }
+
     .banner-text {
         background-attachment: fixed;
     }
+
     .banner-text p {
         width: 900px;
         font-size: 30px;
@@ -386,33 +426,50 @@ h3 {
         margin-top: 0px;
         margin-bottom: 100px;
     }
+
     .banner-textSecond {
         background-image: url(../img/banner-text-second.png);
         padding: 280px;
         background-attachment: fixed;
+        text-align: -webkit-center;
     }
+
+    .curious-fact {
+        width: 363px;
+        height: 44px;
+        margin: 10px 15px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
+
     /* ventana de champions, descripciones, barra de busqueda,*/
     .champions-container {
         margin-top: 135px;
         font-size: 34px;
     }
+
     .description-champions {
         font-size: 20px;
         line-height: 2rem;
     }
+
     h1 {
         line-height: 97px;
         font-size: 36px;
         padding: 55px;
         border-radius: 28px 28px 0 0;
     }
+
     h3 {
         font-size: 65px;
     }
+
     .champions {
         margin-left: 30px;
         margin-bottom: 28px;
     }
+
     /*search champion and button filter */
     .search-champion {
         height: 50px;
@@ -420,6 +477,7 @@ h3 {
         padding-left: 20px;
         font-size: 15px;
     }
+
     .orden {
         height: 50px;
         margin: 20px;
@@ -427,6 +485,7 @@ h3 {
         border-radius: 10px;
         font-size: 15px;
     }
+
     .filter-champions-by-roles {
         width: 163px;
         height: 44px;
@@ -435,39 +494,47 @@ h3 {
         font-weight: bold;
         cursor: pointer;
     }
+
     /*cards*/
     .champions {
         margin-left: 30px;
         margin-bottom: 28px;
         background-color: #000000;
     }
+
     .champions p {
         font-size: 24px;
         color: #f7f7f7;
         height: 40px;
     }
+
     .container-cards {
         margin-top: 18px;
     }
+
     #card {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
     }
+
     .img-champions {
         width: 195px;
         height: 205px;
     }
+
     .name {
         font-size: 40px;
     }
+
     /*modals*/
     /* Modal Content */
     #box_content {
         width: 60%;
         height: 100%;
     }
+
     /*imagen del campeon*/
     .backgroung_img_champion {
         width: 50%;
@@ -475,6 +542,7 @@ h3 {
         left: 810px;
         top: 200px;
     }
+
     /*nombre del campeon*/
     .modal_name_champion {
         position: absolute;
@@ -486,6 +554,7 @@ h3 {
         font-size: 50px;
         text-align: center;
     }
+
     /*descripción*/
     .modal_description_champion {
         position: absolute;
@@ -498,20 +567,24 @@ h3 {
         font-size: 15px;
         text-align: center;
     }
+
     /*caracteristicas del campeón*/
     .modal_description_features {
         position: absolute;
         top: 60%;
         left: 52%;
     }
+
     .modal_description_features p {
         padding: 4px;
     }
+
     .modal_features {
         position: absolute;
         top: 64%;
         left: 52%;
     }
+
     .modal_features p {
         width: 60px;
         height: 60px;
