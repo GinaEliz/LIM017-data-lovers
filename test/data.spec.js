@@ -1,4 +1,4 @@
-import { filterByName, filterByRoles, dataOrden } from '../src/data.js';
+import { filterByName, filterByRoles, dataOrden, computeStats, percetFloor } from '../src/data.js';
 const testLol = [{
         id: "Braum",
         name: "Braum",
@@ -137,6 +137,26 @@ const assassinTest = [{
         tags: ["Assassin"],
     },
 ];
+
+const testLevelM = [{
+        id: "Aatrox",
+        name: "Aatrox",
+        tags: ["Fighter", "Tank"],
+        info: { attack: 8, defense: 4, magic: 3, difficulty: 2 },
+    },
+    {
+        id: "Ahri",
+        name: "Ahri",
+        tags: ["Mage", "Assassin"],
+        info: { attack: 3, defense: 4, magic: 8, difficulty: 5 },
+    },
+    {
+        id: "Azir",
+        name: "Azir",
+        tags: ["Mage", "Marksman"],
+        info: { attack: 6, defense: 3, magic: 8, difficulty: 9 },
+    },
+];
 describe("filterByName", () => {
     it("es una función", () => {
         expect(typeof filterByName).toBe("function");
@@ -173,3 +193,12 @@ describe("dataOrden", () => {
         expect(dataOrden(testLol)).toEqual(testLol);
     });
 });
+
+describe("computeStast and percetFloor", () => {
+    it("debería retornar un array con tres valores de porcentajes", () => {
+        expect(computeStats(testLevelM)).toEqual([33, 33, 33]);
+    });
+    it("debería retornar enteros", () => {
+        expect(percetFloor(1, 10)).toBe(10);
+    });
+})
