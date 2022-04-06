@@ -65,6 +65,10 @@ inputSearchByName.addEventListener("keyup", function() {
 })
 seeChampions(championsData);
 //FILTRAR POR ROLES
+
+const btnAllChampions = document.getElementById("all");
+btnAllChampions.addEventListener("click", () => { seeChampions(championsData); });
+
 //FILTRAR CAMPEONES TANKES
 const btnTankChampion = document.getElementById("tank");
 btnTankChampion.addEventListener("click", function() {
