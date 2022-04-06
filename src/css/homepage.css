@@ -2,12 +2,14 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
-    list-style: none;
+    list-style:none;
     box-sizing: border-box;
 }
 
+/*Estilos principal*/
+
 body {
-    background-color: #f7f7f7;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -17,81 +19,77 @@ header {
     background-color: rgb(7, 2, 2);
 }
 
-
 /* Navegacion*/
-
 nav {
-    position: fixed;
+    height: 100px;
     width: 100%;
-    height: 40px;
-    display: block;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(7, 2, 2);
+    
 }
 
 .logo {
-    width: 50px;
-    margin-right: 20px;
-    margin-top: 10px;
+    width: 90px;
+    margin-left: 20px;
 }
 
-.logo1 {
-    width: 24px;
-    margin-left: 7px;
+.bar-btn {
+    font-size: 25px;
+    color: white;
+    margin-left: 326px;
+    cursor: pointer;
 }
-
 .nav-menu {
     position: fixed;
     width: 100%;
+    height: 0vh;
     top: 100px;
-    background-color: #000000;
+    background-color: rgb(0, 0, 0, .95);
     text-align: center;
+    transition: all .5s;
 }
 
 .nav-menu li {
     display: none;
-    line-height: 30px;
+    line-height:  30px;
     margin: 50px 0;
     transition: all .5s;
 }
 
 .nav-menu li a {
-    color: rgb(248, 248, 248);
+    color: #fff;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
 }
 
-.nav-menu li a:hover {
-    color: rgb(32, 216, 16);
-    transition: 3s;
+.nav-menu li a.active, .nav-menu li a:hover{
+    color: rgb(83, 97, 223);
+    transition: .3s;
 }
 
-.header-nav__menu-icon {
-    font-size: 2rem;
-    color:  rgb(7, 2, 2);
-    cursor: pointer;
-    transition: all 0.5s;
-  }
-  
-  .header-nav__menu-icon:hover {
-    font-size: 2.5rem;
-    filter: brightness(250%);
-  }
-  
-  .header-nav__menu-checkbox {
+#check {
     display: none;
-  }
-  
-  .header-nav__menu-checkbox:checked+.header-nav__link-list {
-    left: 0;
-  }
+}
 
+#check:checked ~ .nav-menu{
+    height: 100vh;
+}
+
+#check:checked ~ .nav-menu li {
+    display: block;
+}
+
+.nav-menu li a.active, .nav-menu li a:hover{
+    color: rgb(48, 59, 207);
+    transition: .3s;
+}
 
 /*Seccion de banners*/
 
 .banner-principal {
+    position: absolute;
     width: 100%;
     height: 340px;
     background-size: 250%;
@@ -99,297 +97,30 @@ nav {
     background-position: center;
 }
 
-.logo2 {
-    position: absolute;
-    width: 340px;
-    margin: 0 auto;
-    padding-top: 280px;
-    padding-left: 10%;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.banner-text {
-    width: 100%;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-image: url(../img/banner-text.jpg);
-    background-position: center;
-    background-size: cover;
-    font-size: 25px;
-    color: white
-}
-
-.banner-text p {
-    width: 300px;
-    font-size: 20px;
-    justify-content: center;
-    margin: 40px;
-}
-
-.banner-textSecond {
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 350px;
-    background-image: url(../img/img-banner-final.png);
-    background-size: cover;
-    background-position: center;
-    font-size: 25px;
-}
-
-.banner-textSecond p {
-    width: 300px;
-    font-size: 20px;
-    margin: 15px 40px;
-    justify-content: center;
-}
-
-.button-champion {
-    width: 180px;
-    height: 40px;
-    margin-top: 16px;
-    background: #C7A43B;
-    border-radius: 40px;
-    border: none;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    cursor: pointer;
-}
-
-
-.curious-fact {
-    width: 101px;
-    height: 32px;
-    background: rgb(8, 63, 6);
-    color: #f7f7f7;
-    border-radius: 10px;
-    margin: 10px 15px;
-}
-
-/* contenedor text */
-
-.champions-container {
-    text-align: center;
-}
-
-.description-champions {
-    font-size: 18px;
-    margin-top: -30px;
-}
-
-h3 {
-    line-height: 150px;
-    font-size: 25px;
-}
-
-.champions {
-    margin: 15px;
-    background-color: #000000;
-}
-
-.champions p {
-    font-size: 24px;
-    color: #f7f7f7;
-    height: 40px;
-}
-
-
-/* search champion and button filter */
-
-.search-champion {
-    width: 50%;
-    height: 40px;
-    margin: 5px;
-    background: #FCFBFB;
-    border: 2px solid #000000;
-    box-sizing: border-box;
-    border-radius: 10px;
-    padding-left: 15px;
-    font-size: 12px;
-}
-
-.orden {
-    height: 40px;
-    margin: 16px;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    font-size: 15px;
-}
-
-.filter-champions-by-roles {
-    width: 85px;
-    height: 32px;
-    background: #C7A43B;
-    border-radius: 10px;
-    margin: 10px 15px;
-}
-
-
-/*cards*/
-
-.container-cards {
-    margin-top: 18px;
-}
-
-#card {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-}
-
-.img-champions {
-    width: 119px;
-    height: 111px;
-}
-
-.name {
-    font-size: 40px;
-}
-
-
-/*modals data*/
-
-
-/*fondo*/
-
-.info_champions {
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-
-/* Modal Content */
-
-#box_content {
-    margin: auto;
-    background-color: rgba(14, 17, 44, 1);
-    color: #f7f7f7;
-    width: 80%;
-}
-
-
-/*imagen del campeon*/
-
-.backgroung_img_champion {
-    display: block;
-    width: 100%;
-    height: 200px;
-}
-
-
-/*nombre del campeon*/
-
-.modal_name_champion {
-    width: auto;
-    height: 100%;
-    margin: 20px;
-    font-size: 30px;
-}
-
-
-/*descripción*/
-
-.modal_description_champion {
-    font-size: 15px;
-    margin: 20px;
-    justify-content: center;
-}
-
-
-/*caracteristicas del campeón*/
-
-.modal_description_features {
-    font-size: 13px;
-    margin-left: 5px;
-    margin-bottom: 7px;
-    display: flex;
-    flex-direction: row;
-}
-
-.modal_description_features p {
-    margin-left: 15px;
-}
-
-.modal_features {
-    display: flex;
-    flex-direction: row;
-}
-
-.modal_features p {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    padding: 15px 20px;
-    background-color: rgba(199, 164, 59, 1);
-    color: #000000;
-    margin-right: 6px;
-    margin-left: 15px;
-    margin-bottom: 30px;
-}
-
-
-/*Btn cerrar*/
-
-.info_champions_close {
-    position: absolute;
-    width: 20px;
-    height: 30px;
-    color: black;
-    float: right;
-    background-color: #f7f7f7;
-    opacity: 20%;
-    margin: 10px;
-    border-radius: 2px;
-    font-size: 20px;
-}
-
-.info_champions_close:hover,
-.info_champions_close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
 /* Responsive for desktop */
-
 @media screen and (min-width: 768px) {
 
-    /*seccion nav*/
     .logo {
-        margin-left: 2px;
+        margin-left: 20px;
         margin-top: 10px;
-        width: 113px;
     }
 
-    .logo1 {
-        margin-left: 10px;
-    }
-
-    nav {
+    nav{
         height: 100px;
-        top: 0;
     }
 
-    .bar-btn {
+    .bar-btn{
         display: none;
     }
 
     .nav-menu {
+        position: relative;
         height: 100px;
         top: 0;
         background: none;
         transition: none;
         text-align: right;
+        margin-right: 50px;
     }
 
     .nav-menu li {
@@ -399,195 +130,14 @@ h3 {
         transition: none;
     }
 
-    /*Seccion de banners*/
+    .nav-menu li a {
+        font-size: 20px;
+    }
+
     .banner-principal {
         height: 640px;
         background-size: cover;
         background-image: url(../img/banner-principal.png);
         background-attachment: fixed;
-    }
-
-    .logo2 {
-        position: absolute;
-        width: 650px;
-        left: 23%;
-        top: 35%;
-        margin: 0;
-    }
-
-    .banner-text {
-        background-attachment: fixed;
-    }
-
-    .banner-text p {
-        width: 900px;
-        font-size: 30px;
-        margin-left: 20%;
-        margin-top: 0px;
-        margin-bottom: 100px;
-    }
-
-    .banner-textSecond {
-        background-image: url(../img/banner-text-second.png);
-        padding: 280px;
-        background-attachment: fixed;
-        text-align: -webkit-center;
-    }
-
-    .curious-fact {
-        width: 363px;
-        height: 44px;
-        margin: 10px 15px;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-    }
-
-    /* ventana de champions, descripciones, barra de busqueda,*/
-    .champions-container {
-        margin-top: 135px;
-        font-size: 34px;
-    }
-
-    .description-champions {
-        font-size: 20px;
-        line-height: 2rem;
-    }
-
-    h1 {
-        line-height: 97px;
-        font-size: 36px;
-        padding: 55px;
-        border-radius: 28px 28px 0 0;
-    }
-
-    h3 {
-        font-size: 65px;
-    }
-
-    .champions {
-        margin-left: 30px;
-        margin-bottom: 28px;
-    }
-
-    /*search champion and button filter */
-    .search-champion {
-        height: 50px;
-        margin: 20px;
-        padding-left: 20px;
-        font-size: 15px;
-    }
-
-    .orden {
-        height: 50px;
-        margin: 20px;
-        border: 2px solid #000000;
-        border-radius: 10px;
-        font-size: 15px;
-    }
-
-    .filter-champions-by-roles {
-        width: 163px;
-        height: 44px;
-        margin: 10px 15px;
-        border: none;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    /*cards*/
-    .champions {
-        margin-left: 30px;
-        margin-bottom: 28px;
-        background-color: #000000;
-    }
-
-    .champions p {
-        font-size: 24px;
-        color: #f7f7f7;
-        height: 40px;
-    }
-
-    .container-cards {
-        margin-top: 18px;
-    }
-
-    #card {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .img-champions {
-        width: 195px;
-        height: 205px;
-    }
-
-    .name {
-        font-size: 40px;
-    }
-
-    /*modals*/
-    /* Modal Content */
-    #box_content {
-        width: 60%;
-        height: 100%;
-    }
-
-    /*imagen del campeon*/
-    .backgroung_img_champion {
-        width: 50%;
-        height: 100%;
-        left: 810px;
-        top: 200px;
-    }
-
-    /*nombre del campeon*/
-    .modal_name_champion {
-        position: absolute;
-        width: 28%;
-        height: 20%;
-        left: 49.5%;
-        top: 150px;
-        font-weight: 400;
-        font-size: 50px;
-        text-align: center;
-    }
-
-    /*descripción*/
-    .modal_description_champion {
-        position: absolute;
-        width: 28%;
-        height: 20%;
-        left: 49.5%;
-        top: 250px;
-        font-weight: 400;
-        line-height: 23px;
-        font-size: 15px;
-        text-align: center;
-    }
-
-    /*caracteristicas del campeón*/
-    .modal_description_features {
-        position: absolute;
-        top: 60%;
-        left: 52%;
-    }
-
-    .modal_description_features p {
-        padding: 4px;
-    }
-
-    .modal_features {
-        position: absolute;
-        top: 64%;
-        left: 52%;
-    }
-
-    .modal_features p {
-        width: 60px;
-        height: 60px;
-        padding: 20px 25px;
     }
 }
