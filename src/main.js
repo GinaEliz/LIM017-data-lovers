@@ -64,53 +64,24 @@ inputSearchByName.addEventListener("keyup", function() {
     seeChampions(dataChampion);
 })
 seeChampions(championsData);
+
+//FILTRAR TODOS LOS CAMPEONES
+const btnAllChampions = document.getElementById("all");
+btnAllChampions.addEventListener("click", () => { seeChampions(filterByName(championsData, "")); });
 //FILTRAR POR ROLES
 
-const btnAllChampions = document.getElementById("all");
-btnAllChampions.addEventListener("click", () => { seeChampions(championsData); });
+function filterChampionByRole(role) {
+    let rolesChampion = filterByRoles(championsData, role)
+    seeChampions(rolesChampion);
+}
 
-//FILTRAR CAMPEONES TANKES
-const btnTankChampion = document.getElementById("tank");
-btnTankChampion.addEventListener("click", function() {
-    const tankValue = document.getElementById("tank").value;
-    let rolesChampion = filterByRoles(championsData, tankValue);
-    seeChampions(rolesChampion);
-});
-//FILTRAR CAMPEONES ASESINOS
-const btnAssassinChampion = document.getElementById("assassin");
-btnAssassinChampion.addEventListener("click", function() {
-    const assassinValue = document.getElementById("assassin").value;
-    let rolesChampion = filterByRoles(championsData, assassinValue);
-    seeChampions(rolesChampion);
-});
-//FILTRAR CAMPEONES MAGOS
-const btnMageChampion = document.getElementById("mage");
-btnMageChampion.addEventListener("click", function() {
-    const mageValue = document.getElementById("mage").value;
-    let rolesChampion = filterByRoles(championsData, mageValue);
-    seeChampions(rolesChampion);
-});
-//FILTRAR CAMPEONES LUCHADORES
-const btnFighterChampion = document.getElementById("fighter");
-btnFighterChampion.addEventListener("click", function() {
-    const fighterValue = document.getElementById("fighter").value;
-    let rolesChampion = filterByRoles(championsData, fighterValue);
-    seeChampions(rolesChampion);
-});
-//FILTRAR CAMPEONES MARKSMAN
-const btnMarksmanChampion = document.getElementById("shooter");
-btnMarksmanChampion.addEventListener("click", function() {
-    const marksmanValue = document.getElementById("shooter").value;
-    let rolesChampion = filterByRoles(championsData, marksmanValue);
-    seeChampions(rolesChampion);
-});
-//FILTRAR CAMPEONES SUPPORT
-const btnSupportChampion = document.getElementById("support");
-btnSupportChampion.addEventListener("click", function() {
-    const supportValue = document.getElementById("support").value;
-    let rolesChampion = filterByRoles(championsData, supportValue);
-    seeChampions(rolesChampion);
-});
+const btnsChampionsRoles = document.querySelectorAll('input[type="button"].filter-champions-by-roles')
+btnsChampionsRoles.forEach(function(item) {
+    item.addEventListener("click", () => {
+        filterChampionByRole(item.value);
+    })
+})
+
 
 //ORDENAR CAMPEONES DEL Z-A
 let ordenZA = document.getElementById("orden");
