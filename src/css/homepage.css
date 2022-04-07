@@ -80,6 +80,24 @@ nav {
     transition: .3s;
 }
 
+#check {
+    display: none;
+}
+
+#check:checked~.nav-menu {
+    height: 100vh;
+}
+
+#check:checked~.nav-menu li {
+    display: block;
+}
+
+.nav-menu li a.active,
+.nav-menu li a:hover {
+    color: rgb(15, 136, 21);
+    transition: .3s;
+}
+
 
 /*Seccion de banners*/
 
