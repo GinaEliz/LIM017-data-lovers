@@ -16,19 +16,23 @@ header {
     background-attachment: fixed;
 }
 
+
 /*Naveeeeee*/
+
+
 /* Navegacion*/
+
 .header-nav {
     background-color: black;
     position: fixed;
 }
+
 nav {
     height: 100px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .logo {
@@ -36,7 +40,7 @@ nav {
 }
 
 .logo1 {
-   display: none;
+    display: none;
 }
 
 .bar-btn {
@@ -45,6 +49,7 @@ nav {
     margin-right: 34px;
     cursor: pointer;
 }
+
 .nav-menu {
     position: fixed;
     width: 100%;
@@ -57,7 +62,7 @@ nav {
 
 .nav-menu li {
     display: none;
-    line-height:  30px;
+    line-height: 30px;
     margin: 50px 0;
     transition: all .5s;
 }
@@ -69,27 +74,12 @@ nav {
     font-weight: 600;
 }
 
-.nav-menu li a.active, .nav-menu li a:hover{
-    color:rgb(15, 136, 21);
-    transition: .3s;
-}
-
-#check {
-    display: none;
-}
-
-#check:checked ~ .nav-menu{
-    height: 100vh;
-}
-
-#check:checked ~ .nav-menu li {
-    display: block;
-}
-
-.nav-menu li a.active, .nav-menu li a:hover{
+.nav-menu li a.active,
+.nav-menu li a:hover {
     color: rgb(15, 136, 21);
     transition: .3s;
 }
+
 
 /*Seccion de banners*/
 
@@ -124,7 +114,6 @@ nav {
     margin: 40px;
 }
 
-
 .banner-textSecond {
     text-align: center;
     padding-top: 50px;
@@ -133,7 +122,8 @@ nav {
     background-size: cover;
     background-position: center;
     font-size: 25px;
-    color: #031c02;;
+    color: #031c02;
+    ;
 }
 
 .banner-textSecond p {
@@ -153,7 +143,6 @@ nav {
     cursor: pointer;
 }
 
-
 .curious-fact {
     width: 101px;
     height: 32px;
@@ -162,6 +151,7 @@ nav {
     border-radius: 10px;
     margin: 10px 15px;
 }
+
 
 /* contenedor text */
 
@@ -216,6 +206,7 @@ h3 {
     border-radius: 10px;
     font-size: 15px;
 }
+
 .filter-all-champions,
 .filter-champions-by-roles {
     width: 85px;
@@ -365,14 +356,11 @@ h3 {
 /* Responsive for desktop */
 
 @media screen and (min-width: 768px) {
-
     /*seccion nav*/
-
     .header-nav {
         background-color: black;
         position: static;
     }
-
     .logos-container {
         display: flex;
     }
@@ -382,21 +370,17 @@ h3 {
         width: 113px;
         display: block;
     }
-
     .logo1 {
         margin-left: 10px;
         width: 52px;
         display: block;
     }
-
-    nav{
+    nav {
         height: 100px;
     }
-
-    .bar-btn{
+    .bar-btn {
         display: none;
     }
-
     .nav-menu {
         position: relative;
         height: 100px;
@@ -406,25 +390,21 @@ h3 {
         text-align: right;
         margin-right: 50px;
     }
-
     .nav-menu li {
         display: inline-block;
         line-height: 100px;
         margin: 0 20px;
         transition: none;
     }
-
     .nav-menu li a {
         font-size: 20px;
     }
-
     /*Seccion de banners*/
     .banner-principal {
         height: 640px;
         background-size: cover;
         background-image: url(../img/banner-principal.png);
     }
-
     .logo2 {
         position: absolute;
         width: 650px;
@@ -432,13 +412,10 @@ h3 {
         top: 35%;
         margin: 0;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
     }
-
     .banner-text {
         background-attachment: fixed;
     }
-
     .banner-text p {
         width: 900px;
         font-size: 30px;
@@ -446,14 +423,12 @@ h3 {
         margin-top: 0px;
         margin-bottom: 100px;
     }
-
     .banner-textSecond {
         background-image: url(../img/banner-text-second.png);
         padding: 280px;
         background-attachment: fixed;
         text-align: -webkit-center;
     }
-
     .curious-fact {
         width: 363px;
         height: 44px;
@@ -462,38 +437,31 @@ h3 {
         border: none;
         cursor: pointer;
     }
-
     /* ventana de champions, descripciones, barra de busqueda,*/
     main.main-container {
         padding-top: 0;
     }
-
     .champions-container {
         margin-top: 135px;
         font-size: 34px;
     }
-
     .description-champions {
         font-size: 20px;
         line-height: 2rem;
     }
-
     h1 {
         line-height: 97px;
         font-size: 36px;
         padding: 55px;
         border-radius: 28px 28px 0 0;
     }
-
     h3 {
         font-size: 65px;
     }
-
     .champions {
         margin-left: 30px;
         margin-bottom: 28px;
     }
-
     /*search champion and button filter */
     .search-champion {
         height: 50px;
@@ -501,7 +469,6 @@ h3 {
         padding-left: 20px;
         font-size: 15px;
     }
-
     .orden {
         height: 50px;
         margin: 20px;
@@ -518,10 +485,8 @@ h3 {
         font-weight: bold;
         cursor: pointer;
     }
-
-    .button-champion{
+    .button-champion {
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
     }
     /*cards*/
     .champions {
@@ -529,40 +494,33 @@ h3 {
         margin-bottom: 28px;
         background-color: #000000;
     }
-
     .champions p {
         font-size: 24px;
         color: #f7f7f7;
         height: 40px;
     }
-
     .container-cards {
         margin-top: 18px;
     }
-
     #card {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
     }
-
     .img-champions {
         width: 195px;
         height: 205px;
     }
-
     .name {
         font-size: 40px;
     }
-
     /*modals*/
     /* Modal Content */
     #box_content {
         width: 60%;
         height: 100%;
     }
-
     /*imagen del campeon*/
     .backgroung_img_champion {
         width: 50%;
@@ -570,7 +528,6 @@ h3 {
         left: 810px;
         top: 200px;
     }
-
     /*nombre del campeon*/
     .modal_name_champion {
         position: absolute;
@@ -582,7 +539,6 @@ h3 {
         font-size: 50px;
         text-align: center;
     }
-
     /*descripción*/
     .modal_description_champion {
         position: absolute;
@@ -595,24 +551,20 @@ h3 {
         font-size: 15px;
         text-align: center;
     }
-
     /*caracteristicas del campeón*/
     .modal_description_features {
         position: absolute;
         top: 60%;
         left: 52%;
     }
-
     .modal_description_features p {
         padding: 4px;
     }
-
     .modal_features {
         position: absolute;
         top: 64%;
         left: 52%;
     }
-
     .modal_features p {
         width: 60px;
         height: 60px;
